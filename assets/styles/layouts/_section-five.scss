@@ -1,0 +1,63 @@
+section{
+    width: 100%;
+    min-height: 100%;
+    padding-bottom: 50px;
+    
+    h2{
+        text-transform: capitalize;
+    }
+
+    .blog{
+        @include alignchild(space-between);
+        width: 100%;
+        height: 100%;
+        @media screen and (max-width:913px){
+            flex-direction: column;
+            gap: 10px;
+            align-items: center; 
+            
+        }
+        
+        .article-cards{
+            overflow: hidden;
+            width: 300px;
+            height: 300px;
+            box-shadow:5px 5px 15px black;
+            background:aliceblue;
+            .picture{
+                width: 100%;
+                height: 100%;
+                img{
+                    width: 100%;
+                    height: 70%;
+                    cursor: pointer;
+                     transition: ease 0.5s;
+                    filter: blur(1px);
+                    &:hover{
+                        filter:none;  
+                    }
+                }
+                .ecrit{
+                    color: black;
+                    text-transform: capitalize;
+                    font-weight: bold;
+                    text-align: left;
+                    margin: 10px;
+                    width: 80%;
+                }
+
+
+            }
+            
+
+
+              
+            
+        }
+
+
+    }
+
+
+
+}

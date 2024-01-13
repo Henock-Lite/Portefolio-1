@@ -1,0 +1,105 @@
+footer{
+    width: 100%;
+    height: 100%;
+    h2{
+        text-transform: capitalize;
+        text-align: left;
+        margin: 10px 0;
+    }
+    .contact-us{
+        text-align: left;
+        @include alignchild(space-between);
+        line-height: 28px;
+        text-transform:capitalize;
+        @media screen and (max-width:720px){
+            flex-direction: column;
+            width: 100%;
+
+            
+        }
+       
+    }
+
+    .contenair-form{
+        form{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            margin: 40px 0;
+            gap: 10px;
+            @media screen and (max-width:720px) {
+                grid-template-columns:1fr;
+            }
+         
+
+            .left-part{
+                grid-template-rows:10% 10% 15% 50%;
+                display: grid;
+                width: 100%;
+                gap: 10px;
+
+                @media screen and (max-width:720px) {
+
+
+
+                    grid-template-rows: 10% 10% 10% 50%;
+                }
+                
+            
+                input{
+                    outline: none;
+                    padding: .1em;
+                    border: solid 1px $color3;
+                    background: none;
+                    color: white;
+                    &::placeholder{
+                        text-transform: capitalize;
+                    }
+                }
+
+                textarea{
+                    resize: none;
+                    outline: none;
+                
+                }
+
+                input[type="button"]{
+                    width: 40%;
+                    padding: 10px;
+                    text-transform: capitalize;
+                    cursor: pointer;
+                    transition: ease .5s;
+
+                    @media screen and (max-width:720px) {
+                        margin: 15px auto;
+                        
+                    }
+                    &:hover{
+                        background:$color2;
+                        border: 1px solid red;
+
+
+                    }
+                }
+            }
+
+
+
+
+            .right-part{
+                width: 100%;
+                height: 100%;
+                iframe{
+                    @media screen and (max-width:720px) {
+
+                        width: 80%;
+                        height: auto;
+                        gap: 15px;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+}

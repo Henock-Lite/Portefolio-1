@@ -1,0 +1,131 @@
+header{
+    height: 100%;
+    width: 100%;
+    .nav-bar{
+        position:fixed;
+        background:$color1;
+        z-index: 100;
+        padding: 15px;
+       display: flex;
+       width: 100%;
+       align-items: center;
+        @media screen and (max-width:727px){
+
+        justify-content: flex-start;
+        width: 100%;
+        height: auto;
+       }
+         @media screen and (max-width:490px) {
+            position: sticky;
+        
+         }
+       
+
+       .logo{
+        
+        p{
+            font-size: 1.5em;
+            text-transform: uppercase;
+            font-weight:bold;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+       }
+       nav{
+        background:$color1;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        @media screen and (max-width:727px){
+
+            display: none;
+        }
+        ul{
+            @include alignchild(space-between);
+            li{
+                padding: 0 25px;
+                text-transform: capitalize;
+                font-weight: 600;
+                cursor: pointer;
+                transition: ease 0.5s;
+                &:hover{
+                    color: $color2;
+                }
+            }
+        }
+       } 
+    }
+    .below{
+        display: grid;
+        grid-template-columns: repeat(2,50%);
+        width: 100%;
+        height: 100vh;
+
+        @media screen and (max-width:854px){
+            grid-template-columns:1fr; 
+            height:auto;
+    
+        
+        }
+     
+               
+       
+
+        .left{
+            text-align: left;
+            align-self: center;
+
+            @media screen and (max-width:496px) {
+            
+                    display: none;
+                }
+            h1{
+                line-height: 55px;
+            }
+            h3{
+                font-weight: 600;
+                line-height:35px;
+                text-transform: uppercase;
+                white-space: nowrap;
+                overflow: hidden;
+                width: 0;
+                animation: forwards animetitle 4.5s steps( 36,end);
+                @media screen and (max-width:854px){
+                   margin: 0 25px;
+                }
+                
+                        @keyframes animetitle{
+                        
+                            from {
+                                width:0;
+                            }
+                            to{
+                                width: 28rem;
+
+                            }
+                        }
+            }
+            div{
+                p{
+                    text-transform: capitalize;
+                    font-family: $font2;
+                    @media screen and (max-width:854px) {
+                            text-wrap:wrap;
+                            margin: 0 25px;
+                            line-height: 22px;
+                        }
+                }
+            }
+        }
+        .right{
+          
+            background:url(/assets/img/profil1.png) top/cover;
+            @media screen and (max-width:854px) {
+                    display: none;
+                }
+            
+            
+        }
+
+    }
+}
